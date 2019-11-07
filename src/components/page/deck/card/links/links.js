@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Links = (props) => {
+  const { link } = props;
+  const { idx } = props;
 
-  const link = props.link;
-  const idx = props.idx;
-
-  return(
+  return (
     <React.Fragment>
 
         <li key = { idx }>
@@ -16,6 +16,11 @@ const Links = (props) => {
 
     </React.Fragment>
   );
+};
+
+Links.propTypes = {
+  link: PropTypes.object,
+  idx: PropTypes.number,
 };
 
 export default Links;
